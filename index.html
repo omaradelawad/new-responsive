@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="sss.css">
+    <title>Document</title>
+</head>
+<body> 
+    <section>
+        <main title="abs.jpg"> 
+            <div class="container">
+                <div class="logo">
+                    <img src="bing-logo.png" alt="">
+                </div> 
+                <div class="text"> 
+                    <div class="header">
+                    <h1>pubg movie</h1> 
+                    <p>movie of the week</p>
+                    </div>
+                    <p class="pp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, dicta qui iure odio vitae adipisci dolorem hic laudantium natus eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio</p> 
+                    <a href="">rate</a>
+                    <a href="">view more</a>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image">
+                            <img onclick="change(this.src)" src="mountane.jpg" alt="">
+                        </div>
+                    </div> 
+                    <div class="card swiper-slide">
+                        <div class="image">
+                            <img onclick="change(this.src)" src="street.jpg" alt="">
+                        </div>
+                    </div>  
+                    <div class="card swiper-slide">
+                        <div class="image">
+                            <img onclick="change(this.src)" src="wall2.jpg" alt="">
+                        </div>
+                    </div>  
+                    <div class="card swiper-slide">
+                        <div class="image">
+                            <img onclick="change(this.src)" src="pubg desert.webp" alt="">
+                        </div>
+                    </div> 
+                    <div class="card swiper-slide">
+                        <div class="image">
+                            <img onclick="change(this.src)" src="snow.jpg" alt="">
+                        </div>
+                    </div>
+                </div> 
+                <!-- <div class="swiper-pagination"></div>  -->
+            </div>
+        </main> 
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".swiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto", 
+          initialSlide: 2, 
+          loop : false , 
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        }); 
+        let main = document.getElementsByTagName('section')[0] 
+        let change = function(source){
+            main.style.backgroundImage = `url(${source})`
+        }
+      </script>
+</body>
+</html>
